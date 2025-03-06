@@ -1,0 +1,75 @@
+1.To check git version
+	git -v
+
+2.To configure the git username and email
+	git config --global user.name "Your Name"
+	git config --global user.email "Your Email"
+
+3.To add the file (To move in staging area)
+	git add <File name>
+
+4. To add the all file in staging area
+	git add .
+	
+	git add <File name, File name,....>
+
+5. To Unstage the file
+	git rm --cached <File name>
+
+6.To commit the file 
+	git commit -m "<Commit message>"
+
+7.To commit without message
+	git commit
+
+        *If we commit the file without any message it will open an editor if you want to write message you can write the message and you want to save this message as commit message 
+	press ESC button and type :wq and hit enter it will save your commit message
+	If you do not want to save the message you want to exit from this editor then press ESC button and type :q! and hit enter you will be come out the editor without saving message
+
+8. To add all the file and commit in single command 
+	git commit -am"Commit message"
+
+9. To check commit history
+	git log
+	
+	* If we want to see commit history with bit information the we can use command like
+		git log --oneline
+	
+	
+10.To add new changes in previous commit without a new commit
+	git commit --amend
+
+	*it will open an editor if you want to write message you can write the message and you want to save this message as new message 
+	press ESC button and type :wq and hit enter it will save your new message with previous commit
+	If you do not want to write new message you can exit from this editor then press ESC button and type :q! and hit enter you will be come out the editor without saving message
+
+11. To add new changes in previous commit without a new commit but a new message
+	git commit --amend -m"<New message>"
+
+12.To see current branch
+	git branch OR git status
+
+13. To create new branch 
+	git branch <Branch name>
+
+14.To switch one branch to another branch
+	git switch <Branch name>
+			OR
+	git checkout <Branch name>
+
+15. To create a new branch and switch in this using one command
+	git switch -c <Branch name>
+			OR
+	git checkout -b <Branch name>
+
+16.To merge the our latest code in a branch first switch inside the branch in which branch you want to merge the code then use command 
+	git merge <Branch name>
+
+17.To delete the branch 
+	git branch -d <Branch name>
+
+	*If branch you want to delete is not merge it will throw the error first merge branch then delete
+	 but you want to delete the branch forcefully you can use command 
+	
+	git branch -D <Branch name>
+18.	
