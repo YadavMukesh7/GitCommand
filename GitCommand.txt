@@ -72,4 +72,71 @@
 	 but you want to delete the branch forcefully you can use command 
 	
 	git branch -D <Branch name>
-18.	
+
+	Note:- If you want to delete any branch first you have to switch any other branch then you can delete the branch 
+		  But if you want to rename the branch then we have to be in same branch 
+
+18.To rename the branch name 
+	git branch -m <New Branch name>
+
+19.To see difference between current working directory and last commit 
+	git diff
+
+
+20. To see any specific file 
+	git diff <File name >
+
+21. If you want to see differences between staging are and last commit
+	git diff -- staged
+
+22. We can see difference between two commit 
+	git diff <First commit id> <Second commit id>
+
+23.To restore from staging are 
+	git restore --staged 
+
+24.To discard changes 
+	git restore .
+
+25.The git stash command in Git is used to temporarily save changes that are not yet ready to be committed. It allows you to "stash" your modifications away and return to a clean working directory,
+     so you can switch branches or perform other tasks without losing your changes.
+
+     1.Basic Usage:
+
+		git stash
+
+	 This command stashes your changes, both staged (added) and unstaged, so your working directory is clean. It saves these changes in a special area and reverts your files back to the state of the 	last 	    	 commit.
+
+     2.List Stashes:
+
+		git stash list
+
+	This command shows all stashed changes you have saved, along with an identifier for each stash.
+
+    3.Apply Stash:
+
+		git stash apply [stash@{n}]
+
+	This applies the changes from a specific stash back into your working directory. If you don't specify a stash, it will apply the most recent one.
+
+    4.	Pop Stash:
+
+		git stash pop
+
+	This applies the most recent stash and then removes it from the stash list. It's a combination of applying and deleting the stash.
+
+   5.Drop Stash:
+
+     		git stash drop [stash@{n}]
+
+       This deletes a specific stash from the list.
+
+   6.Clear All Stashes:
+
+		git stash clear
+
+	This deletes all stashed changes.
+	
+   7.Git Stash with message 
+		
+		git stash -m "<Your message>" -- <file name>
